@@ -36,7 +36,7 @@ def main():
             deleted = True
         if os.path.exists(path=rf"C:\Program Files (x86)\Notes data\{filename}.txt") and deleted is False:  # edits a note
             read_note = open(rf"C:\Program Files (x86)\Notes data\{filename}.txt")
-            print(read_note.read())
+            print(read_note.read().replace('_', ' '))
             read_note.close()
             content = input("enter note content or press enter to not change anything>>").replace(' ', '_')
             if content != "":
